@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1020"/>
+      <stop offset="55%" stop-color="#0D1730"/>
+      <stop offset="100%" stop-color="#0A1A2B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#1E3A5F" stroke-width="1" stroke-opacity="0.42"/>
+    </pattern>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <circle cx="1035" cy="230" r="290" fill="url(#glow)"/>
+
+  <!-- 右上：两套坐标错位示意 -->
+  <path d="M690 585 C 800 545, 880 460, 918 380 S 985 262, 1060 240"
+        fill="none" stroke="#22D3EE" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="16 13" stroke-linecap="round"/>
+  <circle cx="1060" cy="240" r="18" fill="#22D3EE" opacity="0.55" filter="url(#soft)"/>
+  <circle cx="1060" cy="240" r="11" fill="#0A1020" stroke="#22D3EE" stroke-width="4"/>
+  <circle cx="918" cy="380" r="18" fill="#F59E0B" opacity="0.55" filter="url(#soft)"/>
+  <circle cx="918" cy="380" r="11" fill="#0A1020" stroke="#F59E0B" stroke-width="4"/>
+  <line x1="918" y1="380" x2="1060" y2="240" stroke="#94A3B8" stroke-width="2" stroke-dasharray="7 7" opacity="0.65"/>
+  <rect x="944" y="272" width="132" height="44" rx="11" fill="#0F1B33" stroke="#475569" stroke-width="1.5"/>
+  <text x="1010" y="301" text-anchor="middle" fill="#FBBF24" font-size="24" font-weight="700">偏差 95m</text>
+
+  <!-- 主标题 -->
+  <text x="72" y="298" fill="#F8FAFC" font-size="102" font-weight="800" letter-spacing="3">地图收藏迁移</text>
+  <text x="72" y="404" fill="#F8FAFC" font-size="70" font-weight="700" letter-spacing="1">点位为什么<tspan fill="#FBBF24">总是偏</tspan>？</text>
+
+  <rect x="72" y="446" width="210" height="6" rx="3" fill="url(#accent)"/>
+
+  <text x="72" y="508" fill="#A8B6CB" font-size="29" font-weight="500">同一 POI 藏了 4 套坐标，只有一条写入路径是对的</text>
+  <text x="72" y="552" fill="#6B7C93" font-size="25" font-weight="400">根因拆解 · 幂等修复法 · 抗限流批处理</text>
+
+  <!-- 底部标签 -->
+  <g font-size="20" font-weight="600">
+    <rect x="72" y="612" width="176" height="46" rx="23" fill="#101D36" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="160" y="642" text-anchor="middle" fill="#22D3EE">零坐标写入</text>
+
+    <rect x="264" y="612" width="196" height="46" rx="23" fill="#101D36" stroke="#334155" stroke-width="1.5"/>
+    <text x="362" y="642" text-anchor="middle" fill="#CBD5E1">300 请求 / 小时</text>
+
+    <rect x="476" y="612" width="164" height="46" rx="23" fill="#101D36" stroke="#334155" stroke-width="1.5"/>
+    <text x="558" y="642" text-anchor="middle" fill="#CBD5E1">断点续跑</text>
+
+    <rect x="656" y="612" width="176" height="46" rx="23" fill="#101D36" stroke="#334155" stroke-width="1.5"/>
+    <text x="744" y="642" text-anchor="middle" fill="#CBD5E1">脱敏方法论</text>
+  </g>
+</svg>
